@@ -1,0 +1,30 @@
+.app
+    display: flex 
+    align-items: center
+    justify-content: space-around
+    &__item
+        margin-top: 100px
+    &-wrap
+        background: $grey-bg
+    &-download-btn
+        font-weight: 500
+        padding: 23px 115px
+        box-shadow: 0 8px 24px rgba(0, 255, 241, 0.5)
+        border-radius: 0
+        display: flex
+        margin: auto
+        transform: translateY(32px)
+    &-descr 
+        &__download-buttons
+            & a:last-child
+                margin-left: 20px
+        &__title
+            color: $primary 
+            font-size: 40px
+            letter-spacing: 1px
+        &__subtitle
+            max-width: 457px
+            color: $grey-text
+            line-height: 29px
+            margin-bottom: 50px
+            margin-top: 10px
