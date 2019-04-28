@@ -24,6 +24,7 @@
     &__item
         flex-basis: 50%
     &-view 
+        flex-wrap: wrap
         &__img
             margin-left: 130px
             margin-top: 150px
@@ -32,6 +33,8 @@
     &-advantages
         margin: auto
         &__block
+            user-select: none
+            transition: all .7s
             cursor: pointer
             flex-wrap: wrap
             margin-bottom: 20px
@@ -100,3 +103,31 @@
     background-color: $blue
     & img
         margin-top: 3px
+
+
+@media screen and (max-width: 1450px)
+    .presentation
+        &-view
+            &__img
+                margin-left: 20px
+@media screen and (max-width: 1199px)
+    .presentation
+        &-view
+            &__img
+                width: 90%
+@media screen and (max-width: 991px)
+    .presentation
+        &__item
+            flex-basis: 100%
+            flex-direction: column
+        &-view 
+        &-text
+            text-align: center
+            &__title
+                padding-top: 30px
+            &__descr
+                margin: auto
+        &__img
+            & img
+                width: 50%
+                padding-top: 10px
