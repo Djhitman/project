@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-  max-width: 1179px;
+  max-width: 1170px;
   margin: auto;
 }
 
@@ -44,6 +44,7 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
 }
 
 .navbar-list {
@@ -68,6 +69,7 @@ body {
 }
 
 .navbar-hamburger {
+  cursor: pointer;
   margin-left: 30px;
 }
 
@@ -99,7 +101,6 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-left: 20px;
   }
   .navbar-list {
     display: none;
@@ -107,11 +108,50 @@ body {
   .navbar__menuright {
     margin-right: 40px;
   }
+  .navbar-logo {
+    margin-left: 20px;
+  }
 }
 
 @media screen and (max-width: 350px) {
   .navbar-button {
     display: none;
+  }
+}
+
+.menu {
+  padding-top: 10px;
+  z-index: 1;
+  position: absolute;
+  top: 59px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 30%;
+  display: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.menu li {
+  font-size: 20px;
+  margin-right: 40px;
+  text-align: center;
+  margin-top: 20px;
+  list-style: none;
+  color: #233148;
+}
+
+.menu button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 691px) {
+  .menu {
+    width: 80%;
+    margin-left: 10%;
   }
 }
 
@@ -370,11 +410,13 @@ body {
 
 .presentation-advantages__block p {
   display: none;
+  text-align: left;
 }
 
 .presentation-advantages__block-title {
   font-size: 17px;
   width: 50%;
+  text-align: left;
   font-weight: 500;
   margin-left: 25px;
 }
@@ -984,8 +1026,19 @@ body {
 }
 
 @media screen and (max-width: 630px) {
-  .footer-bottom__copy {
-    margin-bottom: 30px;
+  .footer-bottom__social-link:last-child {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .footer-bottom__social {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-bottom__social-link:last-child {
+    margin-right: 10px;
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

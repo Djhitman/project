@@ -3,6 +3,7 @@
     display: flex
     align-items: center
     justify-content: space-around
+    position: relative
     &-list
         display: flex
         list-style: none
@@ -15,6 +16,7 @@
                 margin-bottom: 1px
                 margin-left: 5px
     &-hamburger
+        cursor: pointer
         margin-left: 30px
         &__bars
             display: flex
@@ -31,11 +33,12 @@
 @media screen and(max-width: 691px)
     .navbar
         justify-content: space-between
-        margin-left: 20px
         &-list
             display: none
         &__menuright
             margin-right: 40px
+        &-logo
+            margin-left: 20px
 @media screen and(max-width: 350px)
     .navbar
         &-button

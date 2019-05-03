@@ -12,6 +12,14 @@
     <header class="header">
         <div class="container">
             <div class="navbar">
+                <div class="menu">
+                    <ul class="menu__list">
+                        <li>Home</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li><button class="button navbar-button">Get The App</button></li>
+                    </ul>
+                </div>
                     <a href="#"><img src="img/navbar-logo.png" alt="logo" class="navbar-logo"></a>
                     <ul class="navbar-list">
                         <li><a href="#"> Home <img src="img/arrows/down.png" alt="down-arrow"></a></li>
@@ -293,6 +301,10 @@
             $(this).toggleClass("active");
             $(this).children( ".presentation-advantages__block-descr" ).slideToggle(700, function() {
          });
+        });
+
+        $(".navbar-hamburger").click(function(){
+            $(".menu").slideToggle(500);
         });
     </script>
 </body>
