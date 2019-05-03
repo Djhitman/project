@@ -2,10 +2,20 @@
     background: $primary
     color: $blue
     display: flex   
+    flex-wrap: wrap
     justify-content: space-around
     align-items: center
+    flex-basis: 50%
     padding-top: 40px
     padding-bottom: 40px
     &__social
         &-link
             margin-right: 45px
+            
+@media screen and (max-width: 768px)
+    .footer-bottom
+        flex-basis: 100%
+@media screen and (max-width: 630px)
+    .footer-bottom
+        &__copy
+            margin-bottom: 30px

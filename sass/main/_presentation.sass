@@ -38,6 +38,7 @@
             cursor: pointer
             flex-wrap: wrap
             margin-bottom: 20px
+            margin-right: 20px
             min-height: 80px
             display: flex
             align-items: center
@@ -71,10 +72,15 @@
         width: 100%
         background: $grey-bg
         display: flex
+        justify-content: space-around
+        flex-wrap: wrap
         &__img
+            flex-basis: 50% 
             overflow: hidden
-            transform: translateY(55px)
-            margin-left: 160px
+            transform: translateY(3px)
+            & img
+                margin-left: 8%
+                overflow: hidden
         &__text
             text-align: right
         &__title
@@ -109,25 +115,80 @@
     .presentation
         &-view
             &__img
+                width: 90%
                 margin-left: 20px
 @media screen and (max-width: 1199px)
     .presentation
         &-view
             &__img
                 width: 90%
+        &-main-description
+            &__title
+                padding-top: 60px
+            &__img
+                & img
+                    width: 90%
 @media screen and (max-width: 991px)
     .presentation
         &__item
+            text-align: center
             flex-basis: 100%
             flex-direction: column
+        &-main-description
+            &__title
+                margin-bottom: 0px
+            &__platform 
+                font-size: 14px
+                text-align: center
+                margin: 0px auto 20px auto
+            &__img
+                transform: none
+                & img
+                    margin-bottom: -3px
+                    margin-left: 0
+        &-advantages
+            &__block
+                margin: 30px auto 40px auto
+                &-main-img
+                    margin-right: 0
+                    margin-bottom: -10px  
         &-view 
+            &__img
+                width: 90%
+                margin-top: 50px
+                margin-left: 5%
+            &-phone
+                text-align: center
+                margin-right: 0
+                margin-bottom: 50px
         &-text
             text-align: center
             &__title
                 padding-top: 30px
             &__descr
+                font-size: 14px
                 margin: auto
         &__img
             & img
                 width: 50%
                 padding-top: 10px
+@media screen and (max-width: 768px)
+    .presentation
+        &-view
+            &-phone
+                margin-top: 50px
+                margin-bottom: 0px
+                text-align: center
+            &__img
+                text-align: center
+        &-advantages
+            margin-bottom: 30px
+            &__block
+                margin: 30px auto 20px auto
+                width: 80%
+                &-descr
+                    margin-right: 5px
+            &__block-main-img
+                width: 60%
+                margin-right: 0
+                transform: none

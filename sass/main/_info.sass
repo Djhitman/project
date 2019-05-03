@@ -1,19 +1,38 @@
 .info
     display: flex
+    flex-wrap: wrap
+    flex-basis: 50%
     &-img-block
         background: $primary
-        width: 50%
     &-descr-block
-        width: 50%
+        padding: 10px
+        
         background: $grey-bg
         &__wrap   
-            margin: 130px    
+            padding: 130px 
         &__title
             font-size: 30px
             font-weight: 500    
             line-height: 40px
             max-width: 240px
         &__descr
-            max-width: 470px
+            max-width: 500px
             line-height: 29px
             color: $grey-text
+    &__item
+        flex-basis: 50% 
+
+@media screen and(max-width: 1191px)
+    .info
+        &__item
+            flex-basis: 100%
+        &-img-block
+            min-height: 400px   
+        &-descr-block
+            text-align: center
+            &__wrap 
+                padding: 50px
+            &__descr
+                margin: auto
+            &__title
+                margin: 0px auto 30px auto
